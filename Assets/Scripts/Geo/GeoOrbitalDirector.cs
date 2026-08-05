@@ -137,7 +137,7 @@ public class GeoOrbitalDirector : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(testKey)) GoTo(testLat, testLon);
+        if (GeoInput.KeyDown(testKey)) GoTo(testLat, testLon);
 
         if (flight == null && hasTarget && idleSpinDegPerSec != 0f)
             Orbit.HorizontalAxis.Value += idleSpinDegPerSec * Time.deltaTime;
